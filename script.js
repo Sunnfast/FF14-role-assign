@@ -191,15 +191,19 @@ roleButton.addEventListener("click", function () {
   newSpan = document.createElement("div");
   oldSpan = document.getElementById("child1");
   healerNode = document.createElement("p");
+  healerNode.id = "healer";
   healerNode.innerText = "Healer: " + roleMatrix[randomNum].Healer;
 
   tankNode = document.createElement("p");
+  tankNode.id = "tank";
   tankNode.innerText = "Tank: " + roleMatrix[randomNum].Tank;
 
   cdpsNode = document.createElement("p");
+  cdpsNode.id = "cDPS";
   cdpsNode.innerText = "Close-range DPS: " + roleMatrix[randomNum].CDPS;
 
   ldpsNode = document.createElement("p");
+  ldpsNode.id = "lDPS";
   ldpsNode.innerText = "Long-range DPS: " + roleMatrix[randomNum].LDPS;
   newSpan.append(healerNode, tankNode, cdpsNode, ldpsNode);
   resultDiv.replaceChild(newSpan, oldSpan);
