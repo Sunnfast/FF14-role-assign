@@ -178,6 +178,7 @@ let roleMatrix = [
 let randomNum;
 let resultNode;
 let resultPara;
+let counter;
 let roleButton = document.querySelector("#role-btn");
 let resultDiv = document.querySelector(".result");
 
@@ -187,20 +188,24 @@ function getRandomNum(num) {
 
 roleButton.addEventListener("click", function () {
   randomNum = getRandomNum(23);
-  resultPara = document.createElement("span");
-  resultNode = document.createTextNode(
-    "Healer: " +
-      roleMatrix[randomNum].Healer +
-      "; " +
-      "Tank: " +
-      roleMatrix[randomNum].Tank +
-      "; " +
-      "Close-range DPS: " +
-      roleMatrix[randomNum].CDPS +
-      "; " +
-      "Long-range DPS: " +
-      roleMatrix[randomNum].LDPS
-  );
-  resultPara.appendChild(resultNode);
-  resultDiv.appendChild(resultPara);
+  newSpan = document.createElement("div");
+  oldSpan = document.getElementById("child1");
+  healerNode = document.createElement("p");
+  healerNode.id = "healer";
+  healerNode.innerText = "Healer: " + roleMatrix[randomNum].Healer;
+
+  tankNode = document.createElement("p");
+  tankNode.id = "tank";
+  tankNode.innerText = "Tank: " + roleMatrix[randomNum].Tank;
+
+  cdpsNode = document.createElement("p");
+  cdpsNode.id = "cDPS";
+  cdpsNode.innerText = "Close-range DPS: " + roleMatrix[randomNum].CDPS;
+
+  ldpsNode = document.createElement("p");
+  ldpsNode.id = "lDPS";
+  ldpsNode.innerText = "Long-range DPS: " + roleMatrix[randomNum].LDPS;
+  newSpan.append(healerNode, tankNode, cdpsNode, ldpsNode);
+  resultDiv.replaceChild(newSpan, oldSpan);
+  newSpan.id = "child1";
 });
