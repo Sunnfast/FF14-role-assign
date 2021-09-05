@@ -50,13 +50,9 @@ body {
 .result {
   display: flex;
   justify-content: center;
-  /* margin-top: 2.5rem; */
   padding: 1rem 2rem 4rem;
   height: 30vh;
   font-size: 2em;
-  /* background: white;
-  margin: 2.5rem 20rem;
-  border-radius: 1rem; */
 }
 
 #healer {
@@ -81,4 +77,29 @@ body {
   color: #732828;
   background: white;
   border-radius: 0.5rem;
+}
+
+footer {
+  bottom: 0px;
+
+  position: fixed;
+}
+
+.attribution {
+  display: flex;
+  justify-content: center;
+}
+
+.attribution-text {
+  font-size: 0.75em;
+}
+
+.attribution-text a {
+  text-decoration: none;
+  color: #669966;
+}
+
+.attribution-text a:hover,
+.attribution-text a:focus {
+  color: #99668c;
 }
