@@ -188,23 +188,20 @@ function getRandomNum(num) {
 
 roleButton.addEventListener("click", function () {
   randomNum = getRandomNum(23);
-  newSpan = document.createElement("span");
+  newSpan = document.createElement("div");
   oldSpan = document.getElementById("child1");
-  resultNode = document.createTextNode(
-    "Healer: " +
-      roleMatrix[randomNum].Healer +
-      "; " +
-      "Tank: " +
-      roleMatrix[randomNum].Tank +
-      "; " +
-      "\n" +
-      "Close-range DPS: " +
-      roleMatrix[randomNum].CDPS +
-      "; " +
-      "Long-range DPS: " +
-      roleMatrix[randomNum].LDPS
-  );
-  newSpan.appendChild(resultNode);
+  healerNode = document.createElement("p");
+  healerNode.innerText = "Healer: " + roleMatrix[randomNum].Healer;
+
+  tankNode = document.createElement("p");
+  tankNode.innerText = "Tank: " + roleMatrix[randomNum].Tank;
+
+  cdpsNode = document.createElement("p");
+  cdpsNode.innerText = "Close-range DPS: " + roleMatrix[randomNum].CDPS;
+
+  ldpsNode = document.createElement("p");
+  ldpsNode.innerText = "Long-range DPS: " + roleMatrix[randomNum].LDPS;
+  newSpan.append(healerNode, tankNode, cdpsNode, ldpsNode);
   resultDiv.replaceChild(newSpan, oldSpan);
   newSpan.id = "child1";
 });
