@@ -1,6 +1,8 @@
+@import "config.scss";
+
 body {
-  background: #666699;
-  color: white;
+  background: $backgroundColor;
+  color: $pageText;
   font-family: "Glory", sans-serif;
 }
 
@@ -17,12 +19,12 @@ body {
 
 .note a {
   text-decoration: none;
-  color: #669966;
+  color: $green;
 }
 
 .note a:hover,
 .note a:focus {
-  color: #99668c;
+  color: $lightRed;
 }
 
 .button-div {
@@ -35,15 +37,15 @@ body {
   font-family: "Amita", cursive;
   font-size: 2.25rem;
   border: none;
-  color: white;
-  background: #669966;
+  color: $pageText;
+  background: $green;
   padding: 3rem;
   border-radius: 1.5rem;
 }
 
 .role:hover,
 .role:focus {
-  background: #99668c;
+  background: $lightRed;
   cursor: pointer;
 }
 
@@ -56,26 +58,26 @@ body {
 }
 
 #healer {
-  color: #346624;
-  background: white;
+  color: $healerText;
+  background: $pageText;
   border-radius: 0.5rem;
 }
 
 #tank {
-  color: #2d3a80;
-  background: white;
+  color: $tankText;
+  background: $pageText;
   border-radius: 0.5rem;
 }
 
 #cDPS {
-  color: #732828;
-  background: white;
+  color: $dpsText;
+  background: $pageText;
   border-radius: 0.5rem;
 }
 
 #lDPS {
-  color: #732828;
-  background: white;
+  color: $dpsText;
+  background: $pageText;
   border-radius: 0.5rem;
 }
 
@@ -96,10 +98,10 @@ footer {
 
 .attribution-text a {
   text-decoration: none;
-  color: #669966;
+  color: $green;
 }
 
 .attribution-text a:hover,
 .attribution-text a:focus {
-  color: #99668c;
+  color: $lightRed;
 }
